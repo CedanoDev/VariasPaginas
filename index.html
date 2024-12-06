@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario Múltiples Páginas</title>
+</head>
+<body>
+        <div class="container">
+        <form id="multiStepForm">
+            <div class="form-page" id="page1">
+                <h2>Datos Personales</h2>
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="date" id="fecha_nacimiento" required>
+                <select id="genero" required>
+                    <option value="">Seleccione Género</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+                <input type="text" id="direccion" placeholder="Dirección" required>
+                <input type="tel" id="telefono" placeholder="Teléfono" required>
+                <button type="button" class="next">Siguiente</button>
+            </div>
+
+            <div class="form-page" id="page2" style="display:none;">
+                <h2>Familiares</h2>
+                <div id="familiares"></div>
+                <input type="text" id="nombre_familiar" placeholder="Nombre del Familiar">
+                <input type="text" id="parentesco" placeholder="Parentesco">
+                <input type="number" id="edad" placeholder="Edad">
+                <button type="button" id="addFamiliar">Agregar Familiar</button>
+                <button type="button" class="prev">Anterior</button>
+                <button type="button" class="next">Siguiente</button>
+            </div>
+
+            <div class="form-page" id="page3" style="display:none;">
+                <h2>Condiciones Pre-Existentes de Salud</h2>
+                <div id="condiciones"></div>
+                <input type="text" id="enfermedad" placeholder="Nombre de la Enfermedad">
+                <input type="text" id="tiempo_enfermedad" placeholder="Tiempo con la Enfermedad">
+                <button type="button" id="addCondicion">Agregar Condición</button>
+                <button type="button" class="prev">Anterior</button>
+                <button type="button" class="next">Siguiente</button>
+            </div>
+
+            <div class="form-page" id="page4" style="display:none;">
+                <h2>Internamientos Realizados</h2>
+                <div id="internamientos"></div>
+                <input type="date" id="fecha_internamiento">
+                <input type="text" id="centro_medico" placeholder="Centro Médico">
+                <input type="text" id="diagnostico" placeholder="Diagnóstico">
+                <button type="button" id="addInternamiento">Agregar Internamiento</button>
+                <button type="button" class="prev">Anterior</button>
+                <button type="button" class="next">Siguiente</button>
+            </div>
+
+            <div class="form-page" id="page5" style="display:none;">
+                <h2>Datos Registrados</h2>
+                <pre id="resultado"></pre>
+                <button type="button" class="prev">Anterior</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
